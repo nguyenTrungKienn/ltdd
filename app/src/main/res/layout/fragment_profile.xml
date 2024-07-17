@@ -40,6 +40,53 @@
             android:text="#YNWK till the end 🔥"
             android:textColor="@color/white"
             android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/tab_my_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_edt"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="My Profile"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/tab_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_edt"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Settings"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/tab_log_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_edt"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Log out"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/profile_info_layout"
@@ -68,7 +115,7 @@
                         android:layout_height="24dp"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/ic_profile"
-                        android:tint="@color/white" />
+                        app:tint="@color/white" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -98,7 +145,7 @@
                         android:layout_height="24dp"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/ic_email"
-                        android:tint="@color/white" />
+                        app:tint="@color/white" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -128,7 +175,7 @@
                         android:layout_height="24dp"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/ic_phone"
-                        android:tint="@color/white" />
+                        app:tint="@color/white" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -251,40 +298,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="8dp">
 
-            <Button
-                android:id="@+id/tab_my_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/background_edt"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="My Profile"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/tab_settings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/background_edt"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="Settings"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

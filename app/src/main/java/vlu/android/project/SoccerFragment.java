@@ -30,7 +30,7 @@ public class SoccerFragment extends Fragment {
         // Sample data
         matchList = new ArrayList<>();
         matchList.add(new Match(R.drawable.logo_2, R.drawable.logo_1, "Real Madrid", "Barcelona", "1", "0", "HT"));
-        matchList.add(new Match(R.drawable.logo_2, R.drawable.logo_1, "Manchester United", "Chelsea", "2", "1", "FT"));
+        matchList.add(new Match(R.drawable.logo_3, R.drawable.logo_4, "Manchester United", "Chelsea", "2", "1", "FT"));
 
         adapter = new CustomAdapter(getActivity(), matchList);
         listView.setAdapter(adapter);

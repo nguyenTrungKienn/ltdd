@@ -1,6 +1,10 @@
 package vlu.android.project;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +60,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 profileInfoLayout.setVisibility(View.VISIBLE);
-                settingInfoLayout.setVisibility(View.GONE);
+                settingInfoLayout.setVisibility(View.GONE);//hide settings
             }
         });
         Button tab_settings = view.findViewById(R.id.tab_settings);
@@ -64,10 +68,31 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 settingInfoLayout.setVisibility(View.VISIBLE);
-                profileInfoLayout.setVisibility(View.GONE);
+                profileInfoLayout.setVisibility(View.GONE);//hide profile
+            }
+        });
+        Button logOutButton = view.findViewById(R.id.tab_log_out);
+        logOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLogOutConfirmationDialog();
             }
         });
 
         return view;
+    }
+    private void showLogOutConfirmationDialog() {
+        new AlertDialog.Builder(getContext())
+                .setTitle("Log Out")
+                .setMessage("Are you sure you want to log out?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Redirect to main layout (replace this with your main layout activity)
+                        getActivity().finish();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
     }
 }
