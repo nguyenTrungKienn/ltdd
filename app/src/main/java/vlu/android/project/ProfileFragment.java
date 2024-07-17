@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class ProfileFragment extends Fragment {
-    private LinearLayout profileInfoLayout;
+    private LinearLayout profileInfoLayout, settingInfoLayout;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -44,9 +44,11 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         profileInfoLayout = view.findViewById(R.id.profile_info_layout);
+        settingInfoLayout = view.findViewById(R.id.settings_info_layout);
 
         // Initially hide the profile info layout
         profileInfoLayout.setVisibility(View.GONE);
+        settingInfoLayout.setVisibility(View.GONE);
 
         // Add any button click listeners to show the profile info
         Button myProfileButton = view.findViewById(R.id.tab_my_profile);
@@ -54,6 +56,15 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 profileInfoLayout.setVisibility(View.VISIBLE);
+                settingInfoLayout.setVisibility(View.GONE);
+            }
+        });
+        Button tab_settings = view.findViewById(R.id.tab_settings);
+        tab_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingInfoLayout.setVisibility(View.VISIBLE);
+                profileInfoLayout.setVisibility(View.GONE);
             }
         });
 
